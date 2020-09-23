@@ -69,6 +69,7 @@ public class InputNumberView extends RelativeLayout {
         this.mCurrentNumber = mDefaultValue;
         mDisable = a.getBoolean(R.styleable.InputNumberView_disable, false);
         mBtnBgRes = a.getResourceId(R.styleable.InputNumberView_btnBackground, -1);
+        //自定义数据绑定
 
         Log.d(TAG, "mMax == >" + mMax);
         Log.d(TAG, "mMin == >" + mMin);
