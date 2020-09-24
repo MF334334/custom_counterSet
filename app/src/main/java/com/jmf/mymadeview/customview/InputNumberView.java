@@ -64,11 +64,11 @@ public class InputNumberView extends RelativeLayout {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InputNumberView);
         mMax = a.getInt(R.styleable.InputNumberView_max, 0);
         mMin = a.getInt(R.styleable.InputNumberView_min, 0);
-        mStep = a.getInt(R.styleable.InputNumberView_step, 0);
+        mStep = a.getInt(R.styleable.InputNumberView_step, 1);
         mDefaultValue = a.getInt(R.styleable.InputNumberView_defaultValue, 0);
         this.mCurrentNumber = mDefaultValue;
         mDisable = a.getBoolean(R.styleable.InputNumberView_disable, false);
-        mBtnBgRes = a.getResourceId(R.styleable.InputNumberView_btnBackground, -1);
+        mBtnBgRes = a.getResourceId(R.styleable.InputNumberView_btnBackground, -1);//-1 表示没有资源
         //自定义数据绑定
 
         Log.d(TAG, "mMax == >" + mMax);
