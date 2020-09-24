@@ -17,7 +17,12 @@
         sob:disable="true"
         sob:btnBackground="@color/colorPrimary"
         sob:defaultValue="0"
+        android:visibility="gone"
         />
 
+    <com.jmf.mymadeview.customview.customview.loginpage.LoginKeyborad
+        android:layout_centerInParent="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

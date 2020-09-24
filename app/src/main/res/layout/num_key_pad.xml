@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -9,20 +10,91 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"/>
+
+            style="@style/NumberKeyPad"
+
+            android:text="1" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"/>
+
+            style="@style/NumberKeyPad"
+
+            android:text="2" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"/>
+
+            style="@style/NumberKeyPad"
+
+            android:text="3" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            style="@style/NumberKeyPad"
+
+            android:text="4" />
+
+        <TextView
+
+            style="@style/NumberKeyPad"
+
+            android:text="5" />
+
+        <TextView
+            style="@style/NumberKeyPad"
+            android:text="6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            style="@style/NumberKeyPad"
+
+            android:text="7" />
+
+        <TextView
+
+            style="@style/NumberKeyPad"
+
+            android:text="8" />
+
+        <TextView
+
+            style="@style/NumberKeyPad"
+
+            android:text="9" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NumberKeyPad"
+
+            android:text="0" />
+
+        <TextView
+
+            style="@style/NumberKeyPad"
+            android:layout_weight="2.1"
+            android:text="删除" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
