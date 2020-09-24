@@ -13,8 +13,6 @@
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        sob:max ="30"
-        sob:min="-30"
         sob:step="5"
         sob:disable="true"
         sob:btnBackground="@color/colorPrimary"

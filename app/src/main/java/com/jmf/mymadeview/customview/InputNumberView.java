@@ -99,7 +99,7 @@ public class InputNumberView extends RelativeLayout {
             public void onClick(View v) {
                 mPlusBtn.setEnabled(true);
                 mCurrentNumber -= mStep;
-                if (mCurrentNumber <= mMin) {
+                if (mMin !=0 && mCurrentNumber <= mMin) {
                     v.setEnabled(false);//低于最小，禁止点击
                     mCurrentNumber = mMin; //超出最小边界重置
                     Log.d(TAG, "current min value is..");
@@ -116,7 +116,7 @@ public class InputNumberView extends RelativeLayout {
             public void onClick(View v) {
                 mCurrentNumber += mStep;
                 mMinusBtn.setEnabled(true);
-                if (mCurrentNumber >= mMax) {
+                if (mMax != 0 && mCurrentNumber >= mMax) {
                     v.setEnabled(false);
                     mCurrentNumber = mMax; //超出最大边界重置
                     Log.d(TAG, "current max value is...");
