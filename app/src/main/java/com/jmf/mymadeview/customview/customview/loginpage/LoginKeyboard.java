@@ -15,18 +15,19 @@ import com.jmf.mymadeview.R;
 /*
  * Description:
  * date:2020/9/24 20:36
- */   class LoginKeyborad extends LinearLayout implements View.OnClickListener {
+ */  public class LoginKeyboard extends LinearLayout implements View.OnClickListener {
     private static final String TAG = "LoginKeyborad";
+    private OnKeyPressListener mKeyPresslistener =null;
 
-    public LoginKeyborad(Context context) {
+    public LoginKeyboard(Context context) {
         this(context, null);
     }
 
-    public LoginKeyborad(Context context, @Nullable AttributeSet attrs) {
+    public LoginKeyboard(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public LoginKeyborad(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public LoginKeyboard(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         //
         LayoutInflater.from(context).inflate(R.layout.num_key_pad, this, true);
@@ -52,33 +53,29 @@ import com.jmf.mymadeview.R;
     @Override
     public void onClick(View v) {
         int viewID = v.getId();
-        if (v instanceof TextView) {
-            CharSequence text = ((TextView) v).getText();
-            Log.d(TAG, "click text ==>: "+text);
+        if(viewID ==R.id.number_delete){
+            //删除回退键
+            Log.d(TAG, "mKeyNumberListener is null not callback..");
+            return;
+        }else {
+            //数字键结果
+            String text = ((TextView)v).getText().toString();
+            Log.d(TAG, "click text ==>" + text);
+            mKeyPresslistener.onNumberPress(Integer.parseInt(text));
         }
-        switch (viewID) {
-            case R.id.number_0:
-                break;
-            case R.id.number_1:
-                break;
-            case R.id.number_2:
-                break;
-            case R.id.number_3:
-                break;
-            case R.id.number_4:
-                break;
-            case R.id.number_5:
-                break;
-            case R.id.number_6:
-                break;
-            case R.id.number_7:
-                break;
-            case R.id.number_8:
-                break;
-            case R.id.number_9:
-                break;
-            case R.id.number_delete:
-                break;
-        }
+
+
+
+    }
+
+
+    public void setOnKeyPressListener(OnKeyPressListener listener){
+        this.mKeyPresslistener = listener;
+    }
+
+    public interface OnKeyPressListener{
+        void onNumberPress(int number);
+
+        void onBackPress();
     }
 }
