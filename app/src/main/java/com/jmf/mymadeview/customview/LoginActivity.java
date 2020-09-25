@@ -8,13 +8,13 @@ import android.util.Log;
 import com.jmf.mymadeview.R;
 import com.jmf.mymadeview.customview.customview.loginpage.LoginKeyboard;
 
-public class KeyBoard extends Activity {
+public class LoginActivity extends Activity {
     public static final String TAG = "KeyBoard";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         LoginKeyboard loginKeyboard = this.findViewById(R.id.number_key_pad);
         loginKeyboard.setOnKeyPressListener(new LoginKeyboard.OnKeyPressListener() {
             @Override
