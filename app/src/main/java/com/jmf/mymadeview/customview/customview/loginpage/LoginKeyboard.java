@@ -53,6 +53,11 @@ import com.jmf.mymadeview.R;
     @Override
     public void onClick(View v) {
         int viewID = v.getId();
+        if(mKeyPresslistener == null){
+            Log.d(TAG, "mKeyPressListener is null need not callback");
+            return;
+        }
+
         if(viewID ==R.id.number_delete){
             //删除回退键
             Log.d(TAG, "mKeyNumberListener is null not callback..");
@@ -63,9 +68,6 @@ import com.jmf.mymadeview.R;
             Log.d(TAG, "click text ==>" + text);
             mKeyPresslistener.onNumberPress(Integer.parseInt(text));
         }
-
-
-
     }
 
 
